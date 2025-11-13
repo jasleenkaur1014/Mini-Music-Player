@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <script
+      src="https://kit.fontawesome.com/746738d7a0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="heading">
+      <h2>Music Player</h2>
+
+      <section id="toggle">
+        <label class="toggle-switch">
+          <input type="checkbox" id="mySwitch" placeholder="Dark" />
+          <span class="slider"></span>
+        </label>
+        <p class="mode-txt">Light Mode</p>
+      </section>
+    </div>
+
+    <div id="container">
+      <div id="all-song">
+        <div id="filter">
+          <p>Filter by Genre:</p>
+          <select id="filter-select">
+            <option value="All">All</option>
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+            <option value="Punjabi">Punjabi</option>
+          </select>
+        </div>
+        <div id="search-song">
+          <input
+            type="text"
+            id="search-content"
+            placeholder="Search Songs..."
+          />
+          <button type="submit" id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <h3>All Songs</h3>
+        <ul id="songList"></ul>
+      </div>
+
+      <div id="song-card">
+        <div id="song-details">
+          <div class="song-img">
+            <img
+              src="https://img.freepik.com/free-photo/shiny-headphones-illuminate-nightclub-modern-entertainment-generated-by-ai_188544-25756.jpg?semt=ais_hybrid&w=740&q=80"
+            />
+          </div>
+          <div class="song-name">No song selected</div>
+          <div class="artist-name">
+            Select a song from the list to start playing 🎵
+          </div>
+        </div>
+        <audio controls id="og-audio" autoplay></audio>
+        <div id="audio-btn">
+          <div id="prevButton"><i class="fa-solid fa-angle-left"></i></div>
+          <div id="nextButton"><i class="fa-solid fa-angle-right"></i></div>
+        </div>
+        <button id="add-to-play">Add to Playlist</button>
+      </div>
+
+      <div id="playlist">
+        <div class="playlist-input">
+          <input type="text" id="playlist-name" placeholder="New PlayList..." />
+          <button id="create-playlist">Create Playlist</button>
+        </div>
+
+        <h3>All Playlist</h3>
+        <ul id="playlist-list"></ul>
+        <ul id="playlist-song-list"></ul>
+      </div>
+    </div>
+
+    <footer id="foot">
+      <p>&copy;2025 All Right Reserved</p>
+      <p>Designed by Jasleen Kaur</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
